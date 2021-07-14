@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr_fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Location de vélos sur Toulouse</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.1.0/leaflet.css">
+   
+   
+    
+</head>
+<body>
+
+    <div class="body">
+        <div class="slider">
+
+          
+
+            <div class="diapo">
+
+                <div>
+                    <i id="arrow_left" class="fas fa-arrow-left"></i>
+                </div>
+
+                    <p class="txt_diapo" id="txt">Carte interactive des stations de location de vélos sur Toulouse</p>
+                    <img class="img" id="diapo" src="images/incontournables_0.jpg" alt="photo">
+                
+                <div>
+                    <i id="arrow_right" class="fas fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="map" id="map">
+        </div>
+
+        <div>
+            <span id="compteur"></span>
+        </div>
+
+
+        <div id='details' class="details">
+
+            <div>
+                    <p class="infos_details" id="status"><em>Statut</em></p>
+                    <p class="infos_details" id="name_station"><em>Station</em></p>
+                    <p class="infos_details" id="address"><em>Adresse</em></p>
+                    <p class="infos_details" id="bike_stands"><em>Nombre total de places</em></p>
+                    <p class="infos_details" id="available_bike_stands"><em>Places disponibles</em></p>
+                    <p class="infos_details" id="available_bikes"><em>Vélos disponibles</em></p>
+
+                    <div class="reserve">
+                        <p>Réserver :</p>
+                    </div>
+
+                <div class="relatif">
+
+                    <form class="formulaire" id="form">
+
+                        <div>
+                            <input type="text" id="name" name="user_name" required minlength="1" maxlength="15" placeholder="nom" pattern="^(?!\s*$).*$">
+                        </div>
+
+                        <div>
+                            <input type="text" id="prénom" name="user_prénom" required minlength="1" maxlength="15" placeholder="prénom" pattern="^(?!\s*$).*$">
+                        </div>
+
+                        <div class="signature">
+                            <p>Signature :</p>
+                            <canvas class="canvas" id="canvas">
+                                Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+                            </canvas>
+                        </div>
+
+                        <div class="button_clear" id="button_clear">
+                            <input type="button" value="clear">
+                        </div>
+
+                        <div class="button" id="button">
+                            <input type="button" value="valider">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>  
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.1.0/leaflet.js" type="text/javascript"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/station.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
